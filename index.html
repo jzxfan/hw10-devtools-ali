@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Giga Pet</title>
+    <meta name="description" content="A Giga Pet game made with jQuery">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js" defer></script>
+    <script src="devtools-demo.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        This is your Giga Pet
+      </h1>
+    </header>
+
+    <main>
+      <section class="pet-image-container">
+        <img class="pet-image" src="images/hound.jpg" alt="My Giga Pet, a hound">
+      </section>
+      <section class="dashboard">
+        <div>Name: <strong><span class="name"></span></strong></div>
+        <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
+        <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
+        <!-- New behavior: energy goes up when the pet naps and down when it plays or exercises -->
+        <div>Energy: <strong><span class="energy"></span> / 100</strong></div>
+        <div class="button-container">
+          <button class="treat-button">
+            Treat
+          </button>
+          <button class="play-button">
+            Play
+          </button>
+          <button class="exercise-button">
+            Exercise
+          </button>
+          <!-- New action button -->
+          <button class="nap-button">
+            Nap
+          </button>
+        </div>
+        <!-- HW10: Feed a custom amount (used for the Sources panel debugging demo) -->
+        <div class="feed-container">
+          Feed amount (pounds): <input class="feed-amount" type="number" value="5">
+          <button class="feed-button">Feed</button>
+        </div>
+        <!-- Visual notification: shows a comment from the pet after each button press -->
+        <div class="pet-comment"></div>
+      </section>
+    </main>
+
+    <!-- HW10: Buttons that make the browser log a 404, a TypeError, and a Violation -->
+    <section class="devtools-demo">
+      <h2>HW10 DevTools Demo</h2>
+      <button class="console-demo-button">Run Console Demo</button>
+      <button class="error-404-button">Trigger 404</button>
+      <button class="type-error-button">Trigger TypeError</button>
+      <button class="violation-button">Trigger Violation</button>
+    </section>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+  </body>
+</html>
